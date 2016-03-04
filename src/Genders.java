@@ -4,12 +4,13 @@ public enum Genders {
 
 
     private String delimiter;
+
     Genders(String delimiter) {
         this.delimiter = delimiter;
     }
 
     @Override
     public String toString() {
-        return this.name()+this.delimiter;
+        return this.name() + this.delimiter;
     }
 }

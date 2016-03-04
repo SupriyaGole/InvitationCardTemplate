@@ -8,12 +8,12 @@ public class Name {
         this.lastName = lastName;
     }
 
-    public String firstNameFirst(){
-        return firstName + " "+lastName;
+    public String firstNameFirst() {
+        return firstName + " " + lastName;
     }
 
 
-    public String lastNameFirst(){
-        return lastName + ", "+firstName;
+    public String lastNameFirst() {
+
     }
 }

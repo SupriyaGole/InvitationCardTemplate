@@ -9,7 +9,7 @@ public class Address {
         this.country = country;
     }
 
-    public String getCountryName(){
-        return ","+country;
+    public String getCountryName() {
+        return "," + country;
     }
 }

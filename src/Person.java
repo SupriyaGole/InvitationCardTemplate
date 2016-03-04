@@ -1,24 +1,21 @@
 public class Person {
-
-    private int age;
+    private String age;
     private String gender;
     private Name name;
     private Address address;
 
-    public Person(String firstName, String lastName,String gender,int age, String city, String state, String country) {
-        this.name  = new Name(firstName,lastName);
+    public Person(String firstName, String lastName, String gender, String age, String city, String state, String country) {
+        this.name = new Name(firstName, lastName);
         this.age = age;
         this.gender = gender;
-        this.address = new Address(city,state,country);
+        this.address = new Address(city, state, country);
     }
 
-    public String getName(String format) {
-        String representation = represent(format);
-        return representation;
-
+    public String getName(String format) throws Exception {
+        return represent(format);
     }
 
-    public String getNameWithCountry(String format) {
+    public String getNameWithCountry(String format) throws Exception {
         return getName(format) + address.getCountryName();
     }
 
@@ -26,12 +23,14 @@ public class Person {
         String fullName;
         if (format.equals("firstFirst"))
             fullName = name.firstNameFirst();
-        else
+        else if(format.equals("lastFirst"))
             fullName = name.lastNameFirst();
+        else
+            throw new RuntimeException("Given format is invalid");
         return isMale() ? Genders.Mr + fullName : Genders.Ms + fullName;
     }
 
-    private boolean isMale(){
+    private boolean isMale() {
         return gender.equals("Male");
     }
 }
