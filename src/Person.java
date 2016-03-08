@@ -11,12 +11,15 @@ public class Person {
         this.address = new Address(city, state, country);
     }
 
-    public String getName(String format) throws Exception {
-        return represent(format);
+    public String getName(String nameFormat) throws Exception {
+        return represent(nameFormat);
     }
 
-    public String getNameWithCountry(String format) throws Exception {
-        return getName(format) + address.getCountryName();
+    public String getNameWithCountry(String nameFormat,String countryName) throws Exception {
+        String representation="";
+        if(address.getCountryName().equals(countryName))
+            representation += getName(nameFormat) + ","+address.getCountryName();
+        return representation;
     }
 
     private String represent(String format){
@@ -27,7 +30,7 @@ public class Person {
             fullName = name.lastNameFirst();
         else
             throw new RuntimeException("Given format is invalid");
-        return isMale() ? Genders.Mr + fullName : Genders.Ms + fullName;
+        return isMale() ? Genders.Male + fullName : Genders.Female + fullName;
     }
 
     private boolean isMale() {

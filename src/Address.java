@@ -10,6 +10,6 @@ public class Address {
     }
 
     public String getCountryName() {
-        return "," + country;
+        return country;
     }
 }

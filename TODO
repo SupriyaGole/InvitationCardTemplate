@@ -1,0 +1,39 @@
+Library to print labels(Representation of record) on Invitation Covers
+
+Given list of records from a file:-
+    Input Format:
+        firstName,lastName,gender,age,city,state,country
+
+Output:-
+    Mr/Ms First Last
+    Mr/Ms Last, First
+
+    Prefix:-
+        Gender
+            Male - Mr
+            Female - Ms
+
+--------------------------------------------------------------------------
+
+Usages:-
+    $ cat records
+        Catharine,Hills,Male,20,West Shanna,South Carolina,Macedonia
+
+    $ java PrintLabel --nameFormat --country --ageLimit records
+        Mr Hills, Catharine
+    $ java PrintLabel --nameFormat --country --ageLimit records
+        Mr Catharine Hills
+
+Tasks:-
+    Read given file
+    separate data according to given information
+    examine gender data and add prefix according to that
+    examine the option and give representation of record according to option
+    represent lables.
+
+
+
+
+
+
+

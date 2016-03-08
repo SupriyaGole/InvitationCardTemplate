@@ -1,16 +1,9 @@
 public enum Genders {
-    Mr(" "),
-    Ms(" ");
-
-
-    private String delimiter;
-
-    Genders(String delimiter) {
-        this.delimiter = delimiter;
-    }
+    Male,
+    Female;
 
     @Override
     public String toString() {
-        return this.name() + this.delimiter;
+        return this.name().equals("Male") ? "Mr " : "Ms ";
     }
 }
