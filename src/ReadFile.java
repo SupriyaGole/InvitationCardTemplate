@@ -1,16 +1,18 @@
 import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
 
-public class ReadFile {
+public class ReadFile{
     private String fileName;
 
     public ReadFile(String fileName) {
         this.fileName = fileName;
     }
 
-    public String read() throws IOException {
+    public String read() throws Exception {
         File file = new File(fileName);
+        if(!file.exists()){
+            throw new Exception("File not Found");
+        }
         int length = (int) file.length();
         FileReader fileReader = new FileReader(file);
         char[] data = new char[length];
