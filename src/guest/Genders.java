@@ -1,3 +1,5 @@
+package guest;
+
 public enum Genders {
     Male,
     Female;

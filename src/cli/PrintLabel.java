@@ -1,3 +1,7 @@
+package cli;
+
+import io.ReadFile;
+
 public class PrintLabel {
     public static void main(String[] args) throws Exception {
         OptionHandler optionHandler = new OptionHandler(args);

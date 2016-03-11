@@ -1,3 +1,5 @@
+package guest;
+
 public class Gender {
     private String gender;
 

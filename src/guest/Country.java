@@ -1,3 +1,5 @@
+package guest;
+
 public class Country {
     private String name;
 

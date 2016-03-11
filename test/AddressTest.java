@@ -1,3 +1,5 @@
+import guest.Address;
+import guest.Country;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -6,7 +8,7 @@ import static org.junit.Assert.assertTrue;
 
 public class AddressTest {
     @Test
-    public void test_isFrm_checks_weather_person_from_specific_country() throws Exception {
+    public void test_isFrom_checks_weather_person_from_specific_country() throws Exception {
         Country country = new Country("India");
         Address address = new Address("Mumbai", "Maharashtra",country);
         assertTrue(address.isFrom("India"));

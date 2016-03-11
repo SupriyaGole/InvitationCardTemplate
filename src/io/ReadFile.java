@@ -1,7 +1,9 @@
+package io;
+
 import java.io.File;
 import java.io.FileReader;
 
-public class ReadFile{
+public class ReadFile {
     private String fileName;
 
     public ReadFile(String fileName) {
@@ -10,7 +12,7 @@ public class ReadFile{
 
     public String read() throws Exception {
         File file = new File(fileName);
-        if(!file.exists()){
+        if (!file.exists()) {
             throw new Exception("File not Found");
         }
         int length = (int) file.length();

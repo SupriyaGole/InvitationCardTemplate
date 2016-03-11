@@ -1,3 +1,5 @@
+package guest;
+
 public class Name {
 
     private String firstName;
@@ -14,6 +16,6 @@ public class Name {
 
 
     public String lastNameFirst() {
-        return lastName + ", "+firstName;
+        return lastName + ", " + firstName;
     }
 }

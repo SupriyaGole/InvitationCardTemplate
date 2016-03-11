@@ -9,7 +9,7 @@ Output:-
     Mr/Ms Last, First
 
     Prefix:-
-        Gender
+        guest.Gender
             Male - Mr
             Female - Ms
 
@@ -18,10 +18,12 @@ Output:-
 Usages:-
     $ cat records
         Catharine,Hills,Male,20,West Shanna,South Carolina,Macedonia
+        Mathilde,Johnson,Female,26,West Shanna,North Carolina,Slovakia (Slovak Republic)
 
-    $ java PrintLabel --nameFormat --country --ageLimit records
+
+    $ java cli.PrintLabel --nameFormat --country --ageLimit records
         Mr Hills, Catharine
-    $ java PrintLabel --nameFormat --country --ageLimit records
+    $ java cli.PrintLabel --nameFormat --country --ageLimit records
         Mr Catharine Hills
 
 Tasks:-
@@ -31,8 +33,44 @@ Tasks:-
     examine the option and give representation of record according to option
     represent lables.
 
-Version3:-
-age limit above 20
+Requirement:-
+        User should give a choice for representing records in specific format. file name should be the last option into the option list.
+
+
+Version 1>
+    Usage:-
+            java --nameFormat firstFirst --file records
+    output:- Mr Catharine Hills
+             Ms Mathilde Johnson
+        or
+            java --nameFormat lastFirst --file records
+            Mr Hills, Catharine
+            Ms Johnson Mathilde
+
+Version 2>
+     Usage:- java --nameFormat firstFirst --country Bangladesh --file records
+        or   java --country Bangladesh --nameFormat lastFirst -file records
+
+     Output:- Mr Catharine Hills, Macedonia
+              Ms Mathilde Johnson, Slovakia (Slovak Republic)
+
+Version 3>
+     Usage:- java --nameFormat firstFirst --country Bangladesh --ageLimit 20 --file records
+        or   java --country Bangladesh --nameFormat lastFirst --ageLimit 20 --file records
+
+     Output:- Mr Catharine Hills, Macedonia 20
+              Ms Mathilde Johnson, Slovakia (Slovak Republic),26
+
+Version 4>
+     Usage:- java --nameFormat firstFirst --pattern box --file records
+             +----------------------------+
+             | Mr Catharine Hills         |
+             |----------------------------|
+             | West Shanna, South Carolina|
+             | Macedonia                  |
+             +----------------------------+
+
+
 
 
 

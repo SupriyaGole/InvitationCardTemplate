@@ -1,3 +1,5 @@
+package guest;
+
 public class Person {
     private Name name;
     private Gender gender;

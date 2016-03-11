@@ -1,3 +1,5 @@
+package guest;
+
 public class Address {
     private String city;
     private String state;
